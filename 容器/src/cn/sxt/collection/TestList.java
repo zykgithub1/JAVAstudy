@@ -5,7 +5,8 @@ import java.util.*;
 public class TestList {
 	public static void main(String[]ars) {
 		//test01();
-		test02();
+	//test02();
+		test03();
 
 		
 	}
@@ -37,4 +38,27 @@ public class TestList {
 		System.out.println("list01"+list01);
 		System.out.println("list01"+list01.containsAll(list02));
 	}
+	public static void test03() {
+		List<String> list=new ArrayList<String>();
+		list.add("A");
+		list.add("B");
+		list.add("C");
+		list.add("D");
+		list.add("E");
+		list.add("F");
+		System.out.println(list);
+		list.add(2,"ÎÒ");
+		System.out.println(list);
+		list.remove(1);
+		System.out.println(list);
+		list.set(2, "big boss");
+		System.out.println(list);
+		list.add("E");
+		list.add("D");
+		list.add("C");
+		System.out.println(list);
+		System.out.println(list.indexOf("D"));
+		System.out.println(list.lastIndexOf("D"));
+	}
 }
+

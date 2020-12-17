@@ -16,6 +16,7 @@ public class TestaGeneric {
 		List list=new ArrayList();
 		Map map=new HashMap();
 		
+		System.out.println(map.isEmpty());
 		
 	}
 
