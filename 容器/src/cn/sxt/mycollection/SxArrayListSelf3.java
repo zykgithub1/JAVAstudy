@@ -99,7 +99,7 @@ public class SxArrayListSelf3<E> {
 	public static void main(String[]args) {
 		SxArrayListSelf3 s1=new SxArrayListSelf3(20);
 		
-		for(int i=0;i<51;i++) {
+		for(int i=0;i<44;i++) {
 			s1.add("Zzz"+i);
 		}
 		
