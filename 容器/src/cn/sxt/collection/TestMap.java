@@ -5,10 +5,11 @@ import java.util.Map;
 
 public class TestMap {
 	public static void main(String[]args) {
-		Map<Integer,String> m1=new HashMap<>();
+		HashMap<Integer,String> m1=new HashMap<>();
 		m1.put(1, "one");
 		m1.put(2, "two");
-		m1.put(3, "three");
+		m1.put(31, "three");
+		m1.put(27, "111111111111111");
 		
 		System.out.println(m1);
 		

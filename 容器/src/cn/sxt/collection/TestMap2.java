@@ -18,8 +18,8 @@ public class TestMap2 {
 		System.out.println(e1.hashCode());
 		System.out.println(e2.hashCode());
 		System.out.println(map.hashCode());
-//	    Employee emp=map.get(1001);
-//	    System.out.println(map);
+	    Employee emp=map.get(1001);
+	    System.out.println(map);
 	}
 	
 
