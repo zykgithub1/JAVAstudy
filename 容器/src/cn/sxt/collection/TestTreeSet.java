@@ -15,10 +15,10 @@ public class TestTreeSet {
 		}
 		
 		Set<Emp2> set2=new TreeSet<>();
-		set2.add(new Emp2(100,"张三",3000));
+		set2.add(new Emp2(11,"张三",2000));
 		set2.add(new Emp2(50,"李四",2000));
-		set2.add(new Emp2(100,"王五",8000));
-		set2.add(new Emp2(100,"赵六",20000));
+		set2.add(new Emp2(010,"王五",2000));
+		set2.add(new Emp2(66,"赵六",20000));
 		
 		for(Emp2 m:set2) {
 			System.out.println(m);
