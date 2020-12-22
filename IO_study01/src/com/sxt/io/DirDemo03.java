@@ -4,7 +4,7 @@ import java.io.File;
 
 public class DirDemo03 {
 	public static void main(String[] args) {
-		printTen(1);
+		//File src=new File()
 		
 
 		

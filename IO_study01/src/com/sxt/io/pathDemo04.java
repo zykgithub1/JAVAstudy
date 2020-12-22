@@ -28,7 +28,7 @@ public class pathDemo04 {
 			if(src.isFile()) {
 				System.out.println("文件操作");
 			}else {
-				System.out.println("文件架子操作");
+				System.out.println("文件夹操作");
 			}
 		}
 
