@@ -21,10 +21,8 @@ class Productor extends Thread{
 			System.out.println("生产---》"+i+"个馒头");
 			container.push(new Steamedbun(i));
 		}
-
 	}
 }
-
 class Consumer extends Thread{
 	SynContainer container;
 	public Consumer(SynContainer container) {
@@ -36,7 +34,6 @@ class Consumer extends Thread{
 			System.out.println("消费---》"+container.pop().id+"个馒头");
 			
 		}
-
 	}
 }
 class SynContainer{
@@ -68,7 +65,6 @@ class SynContainer{
 		this.notifyAll();
 		return bun;
 	}
-	
 }
 class Steamedbun{
 	int id;

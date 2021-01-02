@@ -78,9 +78,11 @@ class SynContainer1{
 			//存在数据可以消费
 		count--;
 		this.notifyAll();//存在空间了可以唤醒对方生产了
+
 		}
 		Steamedbun1 bun=buns[count];
 		return bun;
+		
 		
 	}
 	
