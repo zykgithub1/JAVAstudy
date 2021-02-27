@@ -1,3 +1,4 @@
+package Sort;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -134,12 +135,14 @@ public class Sort {
 		int arr[] = getRandomArr();
 		disPlay(arr);
 		int arr2[] = new int[arr.length];
+		int temp[]=new int[arr.length];
 		System.arraycopy(arr, 0, arr2, 0, arr.length);
 		disPlay(arr2);
 		boolean same=true;
 		Arrays.sort(arr);
-		//disPlay(arr);
-		shell.sort(arr2,0,arr2.length-1);
+		disPlay(arr);
+		//QuickSort.quickSort(arr2,0,arr2.length-1);
+		BinaryInsert.binaryInsert(arr2);
 		disPlay(arr2);
 		for(int i=0;i<arr.length;i++) {
 			if(arr[i]!=arr2[i])
