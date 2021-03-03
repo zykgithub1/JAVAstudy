@@ -5,7 +5,7 @@ import java.util.List;
 
 public class changeNumToChar {
 	public static void main(String[] args) {
-		String a="1111";
+		String a="011111";
 		int ans=func(a);
 		System.out.println(ans);
 	}

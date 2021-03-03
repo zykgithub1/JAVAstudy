@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Reverse {
 	public static void main(String[] args) {
-		int m=-54321;
+		int m=12345678;
 		System.out.println(revers(m));
 	}
 	
@@ -29,7 +29,6 @@ public class Reverse {
 			}
 			return result*-1;
 		}
-		
 	}
 
 }

@@ -37,7 +37,6 @@ public class selfTestRecursionQuestion {
 				FindAllPermutations.swap(chs, i, j);
 			}
 		}
-		
 	}
 	public static void test3FindDiffierentSub() {
 		String str="aabc";

@@ -21,7 +21,6 @@ public class FindAllSubString {
 		List<String> ans=new ArrayList();
 		process1(str,1,ans,path);
 		return ans;
-		
 	}
 	private static void process1(char[] str, int index, List<String> ans, String path) {
 		if(index==str.length) {
@@ -33,5 +32,4 @@ public class FindAllSubString {
 		String yes=path+String.valueOf(str[index]);
 		process1(str, index+1, ans, yes);
 	}
-
 }
