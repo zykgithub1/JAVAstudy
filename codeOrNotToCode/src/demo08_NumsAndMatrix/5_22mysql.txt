@@ -1,0 +1,76 @@
+-- SELECT * from emp,dept;   笛卡尔积
+select emp.id,emp.name from emp,dept where emp.id=dept.id;
+SELECT * from dept;
+SELECT * from emp;
+-- 隐式内连接  使用where 消除无用数据
+select * from emp,dept where emp.dept_id=dept.id;
+-- 查询员工表的名称，性别，部门表的名称
+select emp.name,emp.gender,dept.name from emp,dept where emp.dept_id=dept.id;
+
+select 
+t1.name,
+t1.gender,
+t2.`name`
+from 
+emp t1,dept t2 
+where 
+t1.dept_id=t2.id;
+
+-- 显式内连接  
+-- 语法： select 字段列表 from 表名 inner join 表明2 ON
+select * from emp INNER JOIN dept on emp.dept_id=dept.id;
+
+-- 3内连接查询注意事项：
+-- 确定表（从哪些表中取得数据）
+-- 查询条件（where）
+-- 查询哪些字段
+
+-- 二，外连接
+-- 左外连接： 语法 select 字段列表 from 表1 left outer join 表二 on 条件
+-- 查询左表所有数据以及其交集部分。
+
+
+select * from dept;
+SELECT * from emp;
+-- 查询所有员工信息 如果员工有部门，则查询部门的名称，没有部门，则不显示部门名称
+-- 小白龙那条数据因为没有部门id所有被排除了 无法查出
+-- 只有通过左外连接
+select 
+t1.*, t2.name
+ from 
+emp t1,dept t2
+where 
+t1.dept_id=t2.id or t2.id is null;
+
+select t1.*,t2.name from emp t1 left JOIN dept t2 on t1.dept_id=t2.id;
+-- 右外连接：
+-- 语法 :语法 select 字段列表 from 表1 right outer join 表二 on 条件
+--  查询的是右表所有数据以及其交集部分
+
+select t1.*,t2.name from emp t1 right JOIN dept t2 on t1.dept_id=t2.id;
+
+select * from dept t2 right JOIN emp t1 on t1.dept_id=t2.id;
+
+-- 子查询 一个查询的条件嵌套了另外一个查询
+-- 查询最高工资的员工信息
+-- 两部完成
+select MAX(salary) from emp;
+select * from emp where emp.salary=9000;
+-- 一步完成：
+select * from emp where emp.salary=(select MAX(salary) from emp);
+-- 子查询的不同情况：
+-- 1：子查询的结果是单行单列的
+select * from emp where emp.salary<(select avg(salary) from emp);
+select avg(salary) from emp
+-- 2：子查询的结果是多行单列的
+                -- 查询财务部所有的员工信息
+select id from dept where name="财务部";
+select * from emp where emp.dept_id=(select id from dept where name="财务部");
+             -- 查询所有财务部和市场部所有员工的信息
+
+select id from dept where name="财务部"  or name="市场部";
+select * from emp where emp.dept_id in
+(select id from dept where name="财务部"  or name="市场部");
+-- 3：子查询的结果是多行多列的
+
+
