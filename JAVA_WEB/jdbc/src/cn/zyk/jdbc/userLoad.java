@@ -14,8 +14,14 @@ import java.util.Scanner;
 
 public class userLoad {
     public static void main(String[] args) {
+        new userLoad().inputInfo();
+
+    }
+    public void inputInfo(){
         Scanner sc=new Scanner(System.in);
+        System.out.println("请输入用户名");
         String username=sc.nextLine();
+        System.out.println("请输入密码");
         String password=sc.nextLine();
         boolean ans=new userLoad().login(username,password);
         if(ans==true){
@@ -24,6 +30,7 @@ public class userLoad {
             System.out.println("fail");
         }
     }
+
 
     public boolean login(String userName,String password){
         if(userName==null||password==null){
@@ -39,7 +46,7 @@ public class userLoad {
             stmt=conn.createStatement();
             rs=stmt.executeQuery(sql);
             if(rs.next()){
-                System.out.println(rs.getString("username")+"  "+rs.getString("password"));
+//                System.out.println(rs.getString("username")+"  "+rs.getString("password"));
                 return true;
             }else{
                 return false;

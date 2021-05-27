@@ -26,6 +26,7 @@ public class Emp {
         this.dept_id = dept_id;
     }
 
+
     public int getId() {
         return id;
     }
