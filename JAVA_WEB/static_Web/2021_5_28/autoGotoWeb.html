@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            display: inline;
+            color: red;
+        }
+        div{
+            margin: 100px auto;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div><p></p>后跳转页面</div>
+<script>
+    var p=document.querySelector("p");
+    var count=5;
+    function countTime(){
+        p.innerText=count;
+        count--;
+        if(count==-1){
+            location.href="https://www.baidu.com";
+        }
+    }
+    var daojishi=setInterval(countTime,1000);
+    countTime();
+</script>
+</body>
+</html>

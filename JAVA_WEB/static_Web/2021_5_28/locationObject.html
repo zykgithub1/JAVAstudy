@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>刷新</button>
+<button>Go to </button>
+<script>
+    //reload 是loaction的属性
+    var btns=document.querySelectorAll("button");
+    var btn=btns[0];
+    var btn2=btns[1];
+    btn2.onclick=function (){
+        location.href="//www.itcast.cn";
+    }
+    btn.onclick=function () {
+        location.reload();
+        var href=location.href;
+        // alert(href);
+        console.log(href);
+    }
+</script>
+</body>
+</html>

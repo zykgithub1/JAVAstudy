@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="light" src="img//off.gif" alt="">
+<input type="button" value="open">
+<script>
+    var light=document.querySelector("#light");
+    var btn=document.querySelector("input");
+    var op;
+    btn.addEventListener("click",function (){
+        op=open("first.html");
+        console.log(op);
+    })
+    var flag=1;
+    light.addEventListener("click",function (){
+        op.close();
+        if(flag%2==1){
+            light.src="img//on.gif";
+            flag++;
+        }else{
+            light.src="img//off.gif";
+            flag++;
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="获取历史记录个数">
+<script>
+    /*
+    back()       forward()     go()
+     */
+    var btns=document.querySelectorAll("input");
+    var btn=btns[0];
+    btn.onclick=function (){
+        var history=window.history;
+        var length=history.length;
+        console.log(length);
+    }
+</script>
+</body>
+</html>
