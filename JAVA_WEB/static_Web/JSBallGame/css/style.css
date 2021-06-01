@@ -1,0 +1,113 @@
+#showp{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 165px;
+    height: 40px;
+    background: powderblue;
+    font-size: 15px;
+    font: "宋体";
+}
+
+#showScore{
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    width: 130px;
+    height: 40px;
+    background: powderblue;
+    font-size: 28px;
+}
+#m{
+    border: solid 5px black;
+    width: 350px;
+    height: 550px;
+    background-image: url(../img/mBackground.jpg);
+    background-size: 100%;
+    color: white;
+    font-size:15px ;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: none;/*设置鼠标指针消失*/
+}
+#aimLine{
+    position: absolute;
+    z-index: 6;
+}
+
+#arr{
+    border-radius: 50%;/*可把正方形变成圆形，50%即可*/
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    z-index: 8;
+}
+
+#mSquare{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    height: 550px;
+    z-index: 3;
+}
+
+#mBall{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    height: 550px;
+    z-index: 5;
+}
+
+.num{
+    position: relative;
+    top: 12px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.square{
+    position: absolute;
+    top: 0px;
+    width: 49px;
+    height: 49px;
+    text-align: center;
+    background-color: chartreuse;
+    z-index: 5;
+    border: 1px black solid;
+    box-shadow: inset 3px 4px 9px white;
+}
+
+.plusBall{
+    position: absolute;
+    border-radius: 50%;/*可把正方形变成圆形，50%即可*/
+    top: 0px;
+    width: 49px;
+    height: 49px;
+    background-image: url(../img/plusBall.jpg);
+    background-size: 100% 100%;
+    text-align: center;
+    z-index: 5;
+    font-size: 34px;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 50%;/*可把正方形变成圆形，50%即可*/
+    background: white;
+    width: 20px;
+    height: 20px;
+    z-index: 7;
+}
+
+#showBallNum{
+    position:absolute;
+    /*font:white;*/
+    fontSize:14px;
+    width:50px;
+    height:15px;
+}
