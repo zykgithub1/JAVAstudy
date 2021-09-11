@@ -18,7 +18,7 @@ public class JDBCUtils {
             ClassLoader classLoader=JDBCUtils.class.getClassLoader();
             URL res=classLoader.getResource("jdbc.properties");
             String path=res.getPath();
-            System.out.println(path);
+//            System.out.println(path);
             pro.load(new FileReader("D:\\oldDownloads\\vsproject\\eclipseCode\\new Javacode\\JavaWeb&Spring\\src\\jdbc.properties"));
             url=pro.getProperty("url");
             user=pro.getProperty("user");
