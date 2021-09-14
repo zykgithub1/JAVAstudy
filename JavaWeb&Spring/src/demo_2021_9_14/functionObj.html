@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var fun=function (a,b) {
+    console.log(arguments.length)
+    return a+b;
+  }
+  var sumAll=function () {
+    var ans=0;
+    for(var i=0;i<arguments.length;i++){
+      ans+=arguments[i];
+    }
+    return ans;
+  }
+  alert(sumAll(1,2,3,4,5,6,7,8,9,10))
+
+</script>
+</body>
+</html>

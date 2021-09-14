@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url("img/register_bg.png") no-repeat center;
+        }
+
+        .rg_layout {
+            width: 900px;
+            height: 500px;
+            border: 8px solid #EEEEEE;
+            background-color: blanchedalmond;
+            margin: auto;
+            margin-top: 50px;
+
+        }
+
+        .rg_left {
+            border: 1px solid red;
+            float: left;
+            margin: 40px;
+        }
+
+        .rg_left p:first-child {
+            color: #FFD026;
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        .rg_left p:last-child {
+            color: #A6A6A6;
+            font-size: 25px;
+
+        }
+
+        .rg_right p {
+            color: #A6A6A6;
+            font-size: 20px;
+        }
+
+        .rg_center {
+            width: 400px;
+            border: 1px solid red;
+            float: left;
+        }
+
+        .rg_right {
+            margin: 30px 0 0 30px;
+            border: 1px solid red;
+            float: right;
+        }
+
+        .rg_right p a {
+            color: pink;
+        }
+
+        .td_left {
+            height: 45px;
+            width: 100px;
+            text-align: right;
+        }
+
+        .td_right {
+            padding-left: 20px;
+        }
+
+        #username, #password, #email, #name, #birth, #tel {
+            width: 251px;
+            height: 32px;
+
+            border: 1px solid red;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+
+        #btn_sub {
+            width: 150px;
+            height: 40px;
+            background-color: #A6A6A6;
+            border: 1px solid yellow;
+        }
+
+    </style>
+</head>
+<body>
+<div class="rg_layout">
+    <div class="rg_left">
+        <p>新用户注册</p>
+        <p>
+            USER REGISTER
+        </p>
+    </div>
+    <div class="rg_center">
+        <div class="rg_form">
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td class="td_left"><label for="username">用户名</label></td>
+                        <td class="td_right"><input type="text" value="" id="username" ,name="username"
+                                                    placeholder="请输入用户名"></td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label for="password">密码</label></td>
+                        <td class="td_right"><input type="text" value="" id="password" ,name="password"></td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label for="email">邮箱</label></td>
+                        <td class="td_right"><input type="email" value="" id="email" ,name="email"></td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label for="name">姓名</label></td>
+                        <td class="td_right"><input type="text" value="" id="name" ,name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label for="tel">手机号</label></td>
+                        <td class="td_right"><input type="text" value="" id="tel" ,name="tel"></td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label>性别</label></td>
+                        <td class="td_right"><input type="radio" name="sex">男
+                            <input type="radio" name="sex">女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label for="birth">出生日期</label></td>
+                        <td class="td_right"><input type="date" value="" id="birth" ,name="birth"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="注册" id="btn_sub"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+<!--    <script>alert("hello world")</script>-->
+    <div class="rg_right">
+        <P>已有帐号 <a href="#">立即登录</a></P>
+    </div>
+
+</div>
+</body>
+</html>
