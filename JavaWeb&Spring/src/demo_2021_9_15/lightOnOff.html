@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="on.gif" alt="">
+<h1>这是一个灯泡</h1>
+<script>
+    var light = document.querySelector("img")
+    var h=document.querySelector("h1")
+    var times = 1;
+    var times1=1;
+    h.addEventListener("click",function (){
+      h.innerHTML="oh yes"
+    })
+
+    light.addEventListener("click", function () {
+        if (times % 2 != 0) {
+            light.src = "off.gif"
+        } else {
+            light.src = "on.gif"
+        }
+        times++;
+    })
+</script>
+</body>
+</html>
