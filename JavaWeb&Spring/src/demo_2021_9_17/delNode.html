@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div{
+      border: 1px solid red;
+    }
+    .div1{
+      width: 200px;
+      height: 200px;
+    }
+    .div2{
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+<div class="div1">
+  <div class="div2">div2</div>
+  div1
+</div>
+<a href="javascript:void(0)" class="del">点我删除</a>
+<a href="javascript:void(0)" class="add">点我添加</a>
+<script>
+  var element_a=document.querySelector(".del");
+  var add=document.querySelector(".add");
+  element_a.addEventListener("click",function (oldChild) {
+    var div1=document.querySelector(".div1");
+    var div2=document.querySelector(".div2");
+    console.log(div1.children)
+    console.log(div1.childNodes)
+  })
+  add.onclick=function () {
+    var div3=document.createElement("div");
+    div3.innerHTML="i am added";
+    var div1=document.querySelector(".div1");
+    div1.append(div3);
+  }
+</script>
+</body>
+</html>
