@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格全选</title>
+    <style>
+        table{
+            border: 1px solid;
+            width: 500px;
+            margin-left: 30%;
+        }
+
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        div{
+            margin-top: 10px;
+            margin-left: 30%;
+        }
+        .out{
+            background-color: white;
+        }
+        .over{
+            background-color: pink;
+        }
+    </style>
+
+    
+
+</head>
+<body>
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input type="checkbox" class="firstCb"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+
+</table>
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unSelectAll" value="全不选">
+    <input type="button" id="selectRev" value="反选">
+</div>
+<script>
+    window.onload=function () {
+        var select_all=document.querySelector("#selectAll");
+        select_all.addEventListener("click",function () {
+            var cbs=document.querySelectorAll(".cb");
+            for(var i=0;i<cbs.length;i++){
+                cbs[i].checked=true;
+            }
+        })
+        var select_none=document.querySelector("#unSelectAll");
+        select_none.addEventListener("click",function () {
+            var cbs=document.querySelectorAll(".cb");
+            for(var i=0;i<cbs.length;i++){
+                cbs[i].checked=false;
+            }
+        })
+        var select_reverse=document.querySelector("#selectRev");
+        select_reverse.addEventListener("click",function () {
+            var cbs=document.querySelectorAll(".cb");
+            for(var i=0;i<cbs.length;i++){
+                cbs[i].checked=!cbs[i].checked;
+            }
+        })
+
+        var first=document.querySelector(".firstCb");
+        first.addEventListener("click",function () {
+            var cbs=document.querySelectorAll(".cb");
+            for(var i=0;i<cbs.length;i++){
+                cbs[i].checked=this.checked;
+            }
+        })
+        var trs=document.querySelectorAll("tr");
+        for(var i=0;i<trs.length;i++){
+            trs[i].addEventListener("mouseenter",function () {
+                this.className="over";
+            })
+            trs[i].addEventListener("mouseout",function () {
+                this.className="out";
+            })
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gbk" standalon="no"?>
+<?xml-stylesheet type="text/css" href="a.css" ?>
+<users>
+    <user id="first">
+        <name>zhangman</name>
+        <age>24</age>
+        <gender>man</gender>
+    </user>
+    <user id="second">
+        <name>lisi</name>
+        <age>25</age>
+        <gender>famale</gender>
+    </user>
+</users>
