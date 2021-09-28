@@ -1,5 +1,8 @@
 package demo_2021_9_27_leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class targetSumSubArr {
 	public int subarraySum(int[] nums, int k) {
         int n=nums.length;
